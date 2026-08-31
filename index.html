@@ -1,101 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>#srishmetsahil</title>
 
     <meta name="title" content="#srishmetsahil">
-    <meta name="description" content="Save the date - 27th Feb 2027">
+    <meta name="description" content="Save the Dates — Engagement 12 Dec 2026 · Wedding 27 Feb 2027">
 
+    <!-- Open Graph / WhatsApp / iMessage -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="#srishmetsahil">
     <meta property="og:title" content="#srishmetsahil">
-    <meta property="og:description" content="Save the date - 27th Feb 2027">
-    <meta property="og:url" content="https://invalidtoken.github.io/invitation/">
-    <meta property="og:image" content="https://invalidtoken.github.io/invitation/image-1200-2.png">
-    <meta property="og:image:secure_url" content="https://invalidtoken.github.io/invitation/image-1200-2.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Save the Dates — Engagement 12 Dec 2026 · Wedding 27 Feb 2027">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="#srishmetsahil">
-    <meta name="twitter:description" content="Save the date - 27th Feb 2027">
-    <meta name="twitter:image" content="https://invalidtoken.github.io/invitation/image-2.png">
-    <meta name="twitter:url" content="https://invalidtoken.github.io/invitation/">
+    <meta property="og:url"
+          content="https://invalidtoken.github.io/invitation/">
 
-    <meta name="theme-color" content="#f7deda">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta property="og:image"
+          content="https://invalidtoken.github.io/invitation/image-1200-2.png">
 
-    <link rel="icon" type="image/png" href="image-2.png">
+    <meta property="og:image:secure_url"
+          content="https://invalidtoken.github.io/invitation/image-1200-2.png">
+
+    <meta property="og:image:type"
+          content="image/png">
+
+    <meta property="og:image:width"
+          content="1200">
+
+    <meta property="og:image:height"
+          content="630">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="#srishmetsahil">
+
+    <meta name="twitter:description"
+          content="Save the Dates — Engagement 12 Dec 2026 · Wedding 27 Feb 2027">
+
+    <meta name="twitter:image"
+          content="https://invalidtoken.github.io/invitation/image-1200-2.png">
+
+    <meta name="twitter:url"
+          content="https://invalidtoken.github.io/invitation/">
+
+
+
+    <!-- Mobile -->
+    <meta name="theme-color"
+          content="#f7deda">
+
+    <meta name="mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="default">
+
+    <link rel="icon"
+          type="image/png"
+          href="image-2.png">
+
+
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         body {
+
             background-color: #f7deda;
 
             background-image:
-                linear-gradient(rgba(247,222,218,0.08), rgba(247,222,218,0.08)),
+
+                linear-gradient(
+                    rgba(247,222,218,0.08),
+                    rgba(247,222,218,0.08)
+                ),
+
                 url("background.png");
 
             background-size: cover;
+
             background-position: center;
+
             background-repeat: no-repeat;
+
             background-attachment: fixed;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             min-height: 100vh;
+
             padding: 12px;
 
             overflow: hidden;
+
             position: relative;
         }
 
-        /* Soft vignette */
+
+
+        /* --------------------------------
+           SOFT VIGNETTE
+        -------------------------------- */
+
         body::before {
+
             content: "";
+
             position: absolute;
+
             inset: 0;
 
             background: radial-gradient(
+
                 ellipse at center,
+
                 rgba(255,255,255,0) 45%,
+
                 rgba(233,190,183,0.08) 72%,
+
                 rgba(199,145,139,0.16) 100%
+
             );
 
             pointer-events: none;
+
             z-index: 1;
         }
 
+
+
+        /* --------------------------------
+           MAIN IMAGE
+        -------------------------------- */
+
         .container {
+
             width: 100%;
+
             max-width: 1200px;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             position: relative;
+
             z-index: 2;
         }
 
+
         .responsive-image {
+
             width: auto;
+
             height: auto;
 
             max-width: 100%;
+
             max-height: 90vh;
 
             object-fit: contain;
@@ -103,39 +184,471 @@
             border-radius: 8px;
 
             box-shadow:
+
                 0 12px 30px rgba(85,55,50,.10),
+
                 0 35px 80px rgba(85,55,50,.18);
 
             transition: transform .3s ease;
         }
 
+
         .responsive-image:hover {
+
             transform: translateY(-3px);
         }
 
-        @media (max-width:768px) {
 
-            body{
-                padding:10px;
-                background-attachment:scroll;
-            }
 
-            .responsive-image{
-                max-height:82vh;
-            }
+        /* =================================
+           FALLING FLOWERS
+        ================================= */
+
+        .flowers {
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 10;
+        }
+
+
+
+        /*
+         * Each flower is a complete
+         * five-petal flower.
+         */
+
+        .flower {
+
+            position: absolute;
+
+            top: -50px;
+
+            width: var(--size);
+
+            height: var(--size);
+
+            animation:
+
+                flowerFall var(--duration) linear infinite,
+
+                flowerSway var(--sway) ease-in-out infinite alternate;
+
+            animation-delay: var(--delay);
+
+            opacity: var(--opacity);
+
+            will-change: transform;
+        }
+
+
+
+        /*
+         * Five individual petals
+         */
+
+        .petal {
+
+            position: absolute;
+
+            width: 42%;
+
+            height: 42%;
+
+            left: 29%;
+
+            top: 29%;
+
+            background: #e7a4a5;
+
+            border-radius: 50% 50% 50% 10%;
+
+            transform-origin: 50% 50%;
 
         }
+
+
+        .petal:nth-child(1) {
+
+            transform:
+                rotate(0deg)
+                translateY(-62%);
+        }
+
+
+        .petal:nth-child(2) {
+
+            transform:
+                rotate(72deg)
+                translateY(-62%);
+        }
+
+
+        .petal:nth-child(3) {
+
+            transform:
+                rotate(144deg)
+                translateY(-62%);
+        }
+
+
+        .petal:nth-child(4) {
+
+            transform:
+                rotate(216deg)
+                translateY(-62%);
+        }
+
+
+        .petal:nth-child(5) {
+
+            transform:
+                rotate(288deg)
+                translateY(-62%);
+        }
+
+
+
+        /*
+         * Flower centre
+         */
+
+        .center {
+
+            position: absolute;
+
+            width: 24%;
+
+            height: 24%;
+
+            left: 38%;
+
+            top: 38%;
+
+            background: #d88c8e;
+
+            border-radius: 50%;
+
+            z-index: 5;
+
+            box-shadow:
+                0 0 2px rgba(130,70,70,.12);
+        }
+
+
+
+        /*
+         * Falling animation
+         */
+
+        @keyframes flowerFall {
+
+            0% {
+
+                transform:
+                    translate3d(0, -60px, 0)
+                    rotate(0deg);
+            }
+
+            25% {
+
+                transform:
+                    translate3d(
+                        calc(var(--drift) * .25),
+                        25vh,
+                        0
+                    )
+                    rotate(90deg);
+            }
+
+            50% {
+
+                transform:
+                    translate3d(
+                        calc(var(--drift) * .50),
+                        50vh,
+                        0
+                    )
+                    rotate(180deg);
+            }
+
+            75% {
+
+                transform:
+                    translate3d(
+                        calc(var(--drift) * .75),
+                        75vh,
+                        0
+                    )
+                    rotate(270deg);
+            }
+
+            100% {
+
+                transform:
+                    translate3d(
+                        var(--drift),
+                        calc(100vh + 80px),
+                        0
+                    )
+                    rotate(360deg);
+            }
+        }
+
+
+
+        /*
+         * Gentle horizontal movement
+         */
+
+        @keyframes flowerSway {
+
+            0% {
+
+                margin-left: -15px;
+            }
+
+            100% {
+
+                margin-left: 15px;
+            }
+        }
+
+
+
+        /* --------------------------------
+           MOBILE
+        -------------------------------- */
+
+        @media (max-width: 768px) {
+
+            body {
+
+                padding: 10px;
+
+                background-attachment: scroll;
+            }
+
+
+            .responsive-image {
+
+                max-height: 82vh;
+            }
+
+
+            .flower {
+
+                transform-origin: center;
+            }
+        }
+
+
+
+        /* --------------------------------
+           REDUCED MOTION
+        -------------------------------- */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .flowers {
+
+                display: none;
+            }
+
+            .responsive-image {
+
+                transition: none;
+            }
+        }
+
     </style>
+
 </head>
+
+
 
 <body>
 
+
+    <!-- =================================
+         FALLING FLOWERS
+    ================================== -->
+
+    <div class="flowers" id="flowers"></div>
+
+
+
+    <!-- =================================
+         INVITATION
+    ================================== -->
+
     <div class="container">
+
         <img
+
             src="image-2.png"
-            alt="Srish met Sahil"
+
+            alt="Save the Dates — Engagement 12 Dec 2026 and Wedding 27 Feb 2027"
+
             class="responsive-image">
+
     </div>
 
+
+
+    <script>
+
+        const container =
+            document.getElementById("flowers");
+
+
+        /*
+         * Number of flowers on screen.
+         * More = denser flower shower.
+         */
+
+        const FLOWER_COUNT = 24;
+
+
+
+        function createFlower() {
+
+            const flower =
+                document.createElement("div");
+
+            flower.className = "flower";
+
+
+            /* Random horizontal position */
+
+            flower.style.left =
+                Math.random() * 100 + "%";
+
+
+            /* Small flower size */
+
+            const size =
+                Math.random() * 7 + 8;
+
+            flower.style.setProperty(
+                "--size",
+                size + "px"
+            );
+
+
+            /* Slow, elegant falling speed */
+
+            const duration =
+                Math.random() * 12 + 16;
+
+            flower.style.setProperty(
+                "--duration",
+                duration + "s"
+            );
+
+
+            /* Gentle sideways movement */
+
+            const drift =
+                Math.random() * 180 - 90;
+
+            flower.style.setProperty(
+                "--drift",
+                drift + "px"
+            );
+
+
+            /* Different sway speeds */
+
+            flower.style.setProperty(
+                "--sway",
+                Math.random() * 3 + 3 + "s"
+            );
+
+
+            /* Soft opacity variation */
+
+            flower.style.setProperty(
+                "--opacity",
+                Math.random() * 0.3 + 0.45
+            );
+
+
+            /*
+             * Negative delay means flowers
+             * are already falling when page loads.
+             */
+
+            flower.style.setProperty(
+                "--delay",
+                -(Math.random() * duration) + "s"
+            );
+
+
+
+            /*
+             * Five petals
+             */
+
+            for (let i = 0; i < 5; i++) {
+
+                const petal =
+                    document.createElement("div");
+
+                petal.className = "petal";
+
+                flower.appendChild(petal);
+            }
+
+
+
+            /*
+             * Centre
+             */
+
+            const center =
+                document.createElement("div");
+
+            center.className = "center";
+
+            flower.appendChild(center);
+
+
+
+            container.appendChild(flower);
+        }
+
+
+
+        /*
+         * Create flowers continuously.
+         *
+         * They use infinite CSS animation,
+         * so once created they never stop falling.
+         */
+
+        for (
+            let i = 0;
+            i < FLOWER_COUNT;
+            i++
+        ) {
+
+            createFlower();
+        }
+
+    </script>
+
+
 </body>
+
 </html>
